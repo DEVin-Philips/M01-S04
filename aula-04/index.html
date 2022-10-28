@@ -17,37 +17,58 @@
     </header>
 
     <main class="main">
-      <form class="form" id="form-cadastro">
-        <h2 class="subtitle">Cadastre suas dicas</h2>
+      <!-- Ínicio Form -->
+      <section>
+        <form class="form" id="form-cadastro">
+          <h2 class="subtitle">Cadastre suas dicas</h2>
 
-        <div class="row">
-          <div class="column">
-            <input class="input" placeholder="Digite o nome da dica" id="name" required />
+          <div class="row">
+            <div class="column">
+              <input class="input" placeholder="Digite o nome da dica" id="name" required />
 
-            <select class="input" id="category" required>
-              <option disabled>Selecione a categoria da dica</option>
-            </select>
+              <select class="select" id="category" required>
+                <option disabled>Selecione a categoria da dica</option>
+              </select>
+            </div>
+
+            <div class="column">
+              <textarea
+                required
+                id="description"
+                placeholder="Digite a descrição da dica"
+                rows="5"
+              ></textarea>
+            </div>
           </div>
 
-          <div class="column">
-            <textarea
-              class="textarea"
-              id="description"
-              required
-              placeholder="Digite a descrição da dica"
-            ></textarea>
+          <div class="form-actions">
+            <button class="button-secondary" type="reset">Limpar</button>
+            <button class="button-primary" type="submit">Cadastrar</button>
           </div>
-        </div>
+        </form>
+      </section>
+      <!-- Fim Form -->
 
-        <div class="form-actions">
-          <button class="button" type="reset">Limpar</button>
-          <button class="button" type="submit">Cadastrar</button>
-        </div>
-      </form>
+      <!-- Ínicio totais -->
+      <section>
+        <ul id="total" class="list"></ul>
+      </section>
+      <!-- Fim totais -->
 
-      <ul id="total" class="list"></ul>
+      <!-- Início busca -->
+      <section class="search">
+        <input id="input-search" placeholder="Digite o nome da dica" class="input-search" />
+        <button id="button-search" class="button-search">
+          <img src="./assets//search.png" alt="Pesquisar" />
+        </button>
+      </section>
+      <!-- Fim busca -->
 
-      <ul id="list" class="list"></ul>
+      <!-- Ínicio lista -->
+      <section>
+        <ul id="list" class="list"></ul>
+      </section>
+      <!-- Fim lista -->
     </main>
   </body>
 </html>
