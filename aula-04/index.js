@@ -108,7 +108,7 @@ function renderizaTotais() {
     const li = document.createElement('li');
     li.classList.add('list-item', 'list-item-total');
 
-    li.addEventListener('click', () => renderizaDicasFiltradasPorCategoria(categoria.id));
+    li.addEventListener('click', () => filtrarPorCategoria(categoria.id));
 
     const titulo = document.createElement('h2');
     titulo.innerText = categoria.nome;
